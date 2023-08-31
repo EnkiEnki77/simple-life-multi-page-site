@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    
+}
+
+/* 
+==========
+Typogrophy
+========== 
+*/
+
+.site-title{
+    text-align: center;
+}
+
+h1{
+    color: #143774;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.sub-title{
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+    color: #1792D2;
+    font-size: .75rem;
+    letter-spacing: 2px;
+}
+
+.nav-list{
+    list-style: none;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding:.125em 0;
+}
+
+.current-page{
+    border-bottom: 2px solid #717171;
+}
+
+/* 
+==========
+Layout
+==========
+*/
+
+.container{
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+header{
+    background-color: #F8F8F8;
+    padding: 3rem 0;
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
