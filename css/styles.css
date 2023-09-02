@@ -1,59 +1,138 @@
-body{
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
-    
-}
-
-/* 
-==========
-Typogrophy
-========== 
+/*  Fonts
+-----
+font-family: 'Lora', serif;
+font-family: 'Ubuntu', sans-serif;
 */
 
-.site-title{
-    text-align: center;
+body{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 1.125rem;
+    box-sizing: border-box;
+    color: #717171;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+
+/* 
+    Typogrophy
+*/
+
+h1,
+h2,
+h3{
+    margin-top: 0;
+    color: #143774;
+    font-weight: 400;
+    font-family: "Lora", serif;
 }
 
 h1{
-    color: #143774;
-    font-family: 'Lora', serif;
-    font-weight: 400;
     font-size: 2rem;
-    margin: 0;
+    margin-bottom: 0;
+}
+
+strong{
+    font-weight: 700;
+}
+
+a{
+    color: #1792D2;
+}
+
+a:hover,
+a:focus{
+    color: #143774;
+}
+
+.sub-title,
+.continue-reading,
+.nav-link,
+.widget-title{
+    color: #1792D2;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .sub-title{
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-top: 0;
-    color: #1792D2;
     font-size: .75rem;
-    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 3.5em;
 }
 
 .nav-list{
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list-item{
+    margin-bottom: 2em;
+}
+
+.nav-list-item:last-child{
+    margin-bottom: 0;
 }
 
 .nav-link{
-    text-decoration: none;
     color: #717171;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 3px;
-    padding:.125em 0;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: .25em 0;
+}
+
+.nav-link:hover,
+.nav-link:focus{
+    color: #1792D2
 }
 
 .current-page{
-    border-bottom: 2px solid #717171;
+    border-bottom: #717171 solid 2px;
+}
+
+.current-page:hover,
+.current-page:focus{
+    color: #717171;
+}
+
+.article-info,
+.continue-reading,
+.widget-body{
+    font-size: .875rem;
+}
+
+.article-title{
+    font-size: 1.5rem;
+}
+
+.continue-reading{
+    text-decoration: none;
+}
+
+.widget-title,
+.widget-recent-title{
+    font-size: 1.125rem;
+}
+
+.widget-title{
+    font-family: "Ubuntu",sans-serif;
+    font-weight: 700;
+    color: #143774;
+    margin-bottom: 1.5em;
+}
+
+.widget-body{
+    color: #143774;
 }
 
 /* 
-==========
-Layout
-==========
+    Layout
 */
 
 .container{
@@ -62,22 +141,138 @@ Layout
     margin: 0 auto;
 }
 
-.container-flex{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
 header{
-    background-color: #F8F8F8;
-    padding: 3rem 0;
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 3em 0;
+    margin-bottom: 3em;
 }
 
-.nav-list{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 0;
-    margin: 0;
+article{
+    margin-bottom: 3em;
 }
+
+footer{
+   background-color: #143774;
+   padding: 4em 0;
+}
+
+.footer-title{
+    font-weight: 700;
+    color: #FFFFFF;
+    opacity: 50%;
+    font-size: 1.125rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.copyright{
+    font-weight: 300;
+    color: #FFFFFF;
+    opacity: 50%;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.article-featured{
+    border-bottom: solid #717171 1px;
+    padding-bottom: 1.5em;
+}
+
+
+
+.article-img,
+.article-featured-img,
+.widget-img,
+.widget-recent-img{
+    max-height: 240px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.widget-recent-post{
+    border-bottom: 1px solid #717171;
+    margin-bottom: 2em;
+}
+
+.widget-recent-post:last-child{
+    margin-bottom: 0;
+    border: none;
+}
+
+.widget-recent-post:last-child > h3{
+    margin-bottom: 0;
+}
+
+.widget-img{
+    max-height: 130px;
+    object-position: center;
+}
+
+.widget-recent-img{
+    max-height: 90px;
+    margin-bottom: 1em;
+}
+
+.widget{
+    border: 20px solid #EBEBEB;
+    padding: 1.375em;
+}
+
+.widget-body{
+    margin-bottom: 0;
+}
+
+@media (min-width: 675px){
+    main{
+        flex-basis: 70%;
+    }
+
+    aside{
+        flex-basis: 25%;
+    }
+
+    .container-flex{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-list{  
+        display: flex;
+    }
+
+    .nav-list-item{
+        margin: 0 0 0 1.5em;
+    }
+
+    .sub-title{
+        margin-bottom: 0;
+    }
+
+    .article-recent{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .article-info-cont{
+        flex-basis: 30%;
+    }
+
+    .article-body-cont{
+        flex-basis: 67%;
+    }
+
+    .article-img{
+        height: 100%;
+        max-height: 240px;
+    }
+}
+
+
+
